@@ -1,9 +1,7 @@
 
 docs
 wandb
-experiments/data/
 experiments/data_ops/
-experiments/runs/runs/
 experiments/cfg/not_used/
 experiments/training/not_used/
 _pycache_/
