@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: mesh-sim
+Version: 0.0.1
+Summary: Mesh operations with Signed Incidence Matrices
+Author: Akis Nousias
+Author-email: nousiasx@gmail.com
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: scipy>=1.10.0
+Requires-Dist: potpourri3d>=1.1.0
+Requires-Dist: open3d-cpu>=0.19.0
+Requires-Dist: matplotlib
+Requires-Dist: python-graphblas

@@ -1,0 +1,68 @@
+device = "cpu"
+
+[dataset]
+
+[dataset.kw]
+transforms = ["vertex_center_scale"]
+
+[dataset.kw.extract_kw]
+mode = "bigbird"
+
+[dataset.kw.extract_kw.nbor_kw]
+v_max = 64
+e_max = 64
+f_max = 64
+dilations = 1
+v_k = 6
+e_k = 6
+f_k = 6
+
+# This tag guides the dataloader process
+[dataset.dataloader]
+batch_size = 16
+shuffle = false
+num_workers = 1
+multiprocessing_context = "forkserver"
+persistent_workers = true
+drop_last = false
+
+# The `model` tag guides the build-model functionality to generate an 
+# architecture similar to the trained model.
+[model]
+v_in = 7
+e_in = 21
+f_in = 13
+d_v = 128
+d_e = 128
+d_f = 128
+d_hidden = 256
+N = 2
+dropout = 0.1
+modes = "v"
+embed_type = "neighbor"
+attn_type = "hodge"
+task_type = "classification"
+layer_layout = "1:1e"
+
+[model.embed_kw]
+n = 2
+
+[model.attn_kw]
+h = 4
+dropout_attn = 0.1
+attn_sym = false
+attn_mask = false
+norm_type = "layer_norm"
+hodge_type = "grouped"
+attn_acc = false
+
+[model.attn_basic_kw]
+h = 4
+dropout_attn = 0.2
+norm_type = "layer_norm"
+attn_type = "full-linear"
+
+[model.task_kw]
+num_classes = 30
+modes = "v"
+dropout = 0.1

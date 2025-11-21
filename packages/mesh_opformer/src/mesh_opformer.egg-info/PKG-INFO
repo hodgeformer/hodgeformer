@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: mesh_opformer
+Version: 0.0.1
+Author: Akis Nousias, Stavros Nousias
+Author-email: nousiasx@gmail.com, stavros.nousias@gmail.com
+Requires-Dist: torch>=2.0.0
+Requires-Dist: numpy>=1.20.0
+Requires-Dist: scikit-learn>=1.4.0
+Requires-Dist: toml>=0.10
+Requires-Dist: einops>=0.8.0
+Requires-Dist: wandb

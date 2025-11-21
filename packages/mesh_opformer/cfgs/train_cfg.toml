@@ -1,0 +1,123 @@
+device = "cpu"
+use_wandb = false
+
+[dataset]
+location = "local"
+type = "simplified"
+task = "classification"
+path = "/home/int/Workspace/mesh-bert/experiments/classification_shrec11/data/simplified/raw"
+meta = "/home/int/Workspace/mesh-bert/experiments/classification_shrec11/categories.txt"
+
+[dataset.split]
+train_size = 0.8
+valid_size = 0.0
+test_size = 0.2
+
+[dataset.train.kw]
+transforms = ["vertex_center_scale", "rotate"]
+num_classes = 30
+
+[dataset.train.kw.extract_kw]
+mode = "bigbird"
+
+[dataset.train.kw.extract_kw.nbor_kw]
+v_max = 64
+e_max = 64
+f_max = 64
+dilations = 1
+v_k = 4
+e_k = 4
+f_k = 4
+
+[dataset.test.kw]
+transforms = ["vertex_center_scale"]
+num_classes = 30
+
+[dataset.test.kw.extract_kw]
+mode = "bigbird"
+
+[dataset.test.kw.extract_kw.nbor_kw]
+v_max = 64
+e_max = 64
+f_max = 64
+dilations = 1
+v_k = 6
+e_k = 6
+f_k = 6
+
+[dataset.dataloader.train]
+batch_size = 16
+shuffle = true
+num_workers = 1
+multiprocessing_context = "forkserver"
+persistent_workers = true
+drop_last = false
+
+[dataset.dataloader.test]
+batch_size = 16
+shuffle = false
+num_workers = 1
+multiprocessing_context = "forkserver"
+persistent_workers = true
+drop_last = false
+
+[train]
+
+epochs = 300
+lr = 1e-3
+
+[train.model]
+v_in = 7
+e_in = 21
+f_in = 13
+d_v = 128
+d_e = 128
+d_f = 128
+d_hidden = 256
+N = 2
+dropout = 0.1
+modes = "v"
+embed_type = "neighbor"
+attn_type = "hodge"
+task_type = "classification"
+layer_layout = "1:1e"
+
+[train.model.embed_kw]
+n = 2
+
+[train.model.attn_kw]
+h = 4
+dropout_attn = 0.1
+attn_sym = false
+attn_mask = false
+norm_type = "layer_norm"
+hodge_type = "grouped"
+attn_acc = false
+
+[train.model.attn_basic_kw]
+h = 4
+dropout_attn = 0.2
+norm_type = "layer_norm"
+attn_type = "full-linear"
+
+[train.model.task_kw]
+num_classes = 30
+modes = "v"
+dropout = 0.1
+
+[train.loss]
+loss_type = "cross-entropy"
+label_smoothing = 0.2
+
+[train.optim]
+use_reg = false
+reg_type = "activations"
+_lambda = 1e-5
+
+[wandb]
+WANDB_MODE = "online" # Options: 'online', 'offline' ,'disabled'
+name = "experiment-name"
+
+[wandb.init]
+project = "project-name"
+entity = "user-wandb-account"
