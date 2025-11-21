@@ -6,8 +6,7 @@ This repository holds code for the HodgeFormer deep learning architecture operat
 
 ## Paper & Code availability 
 
-*Paper Arxiv link:*  
-<a href="https://arxiv.org/abs/2509.01839" target="_blank">https://arxiv.org/abs/2509.01839</a>
+*Paper Arxiv link:*  <a href="https://arxiv.org/abs/2509.01839" target="_blank">https://arxiv.org/abs/2509.01839</a>
 
 
 *Project page:* 
