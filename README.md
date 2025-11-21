@@ -6,10 +6,10 @@ This repository holds code for the HodgeFormer deep learning architecture operat
 
 ## Paper & Code availability 
 
-*Paper Arxiv link:*  [https://arxiv.org/abs/2509.01839](https://arxiv.org/abs/2509.01839)
+*Paper Arxiv link:*  [https://arxiv.org/abs/2509.01839](https://arxiv.org/abs/2509.01839){:target="_blank"}
 
 
-*Project page:* 
+<!-- *Project page:* 
 <a href="https://hodgeformer.github.io/" target="_blank">https://hodgeformer.github.io/</a>
 
 
@@ -18,7 +18,7 @@ This repository holds code for the HodgeFormer deep learning architecture operat
 
 
 *Reviewed on Openreview:* 
-<a href="https://openreview.net/forum?id=PCbFYiMhlO" target="_blank">https://openreview.net/forum?id=PCbFYiMhlO</a>
+<a href="https://openreview.net/forum?id=PCbFYiMhlO" target="_blank">https://openreview.net/forum?id=PCbFYiMhlO</a> -->
 
 
 
