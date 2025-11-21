@@ -6,11 +6,11 @@ This repository holds code for the HodgeFormer deep learning architecture operat
 
 ## Paper & Code availability 
 
-*Paper Arxiv link:*  [https://arxiv.org/abs/2509.01839](https://arxiv.org/abs/2509.01839){:target="_blank"}
+<!-- *Paper Arxiv link:*  [https://arxiv.org/abs/2509.01839](https://arxiv.org/abs/2509.01839){:target="_blank"} -->
 
 
-<!-- *Project page:* 
-<a href="https://hodgeformer.github.io/" target="_blank">https://hodgeformer.github.io/</a>
+<!-- <!-- *Project page:* 
+<a href="https://hodgeformer.github.io/" target="_blank">https://hodgeformer.github.io/</a> -->
 
 
 *Code available in the following link:* 
