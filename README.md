@@ -2,25 +2,21 @@
 
 This repository holds code for the HodgeFormer deep learning architecture operating on mesh data.
 
-
-
 ## Paper & Code availability 
-
-*Paper Arxiv link:*  <a href="https://arxiv.org/abs/2509.01839" target="_blank">https://arxiv.org/abs/2509.01839</a>
-
 
 *Project page:* 
 <a href="https://hodgeformer.github.io/" target="_blank">https://hodgeformer.github.io/</a>
 
+*Paper:* 
+<a href="https://arxiv.org/abs/2509.01839" target="_blank">https://arxiv.org/abs/2509.01839</a>
 
-*Code available in the following link:* 
+
+*Code:* 
 <a href="https://github.com/hodgeformer/hodgeformer" target="_blank">https://github.com/hodgeformer/hodgeformer</a>
 
 
-*Reviewed on Openreview:* 
-<a href="https://openreview.net/forum?id=PCbFYiMhlO" target="_blank">https://openreview.net/forum?id=PCbFYiMhlO</a>
-
-
+<!-- *Reviewed on Openreview:* 
+<a href="https://openreview.net/forum?id=PCbFYiMhlO" target="_blank">https://openreview.net/forum?id=PCbFYiMhlO</a> -->
 
 ## Abstract
 
@@ -230,6 +226,9 @@ python infer_hodgeformer.py \
 --out ./out.json \
 --dataset_path ../data/human_benchmark_sig_17/pd_meshnet20_seg_benchmark/test
 ```
+
+
+
 
 
 ## Citation 
