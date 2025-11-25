@@ -4,4 +4,7 @@ wandb
 experiments/data_ops/
 experiments/cfg/not_used/
 experiments/training/not_used/
+experiments/cfg/_not_used/
+experiments/training/_not_used/
+_not_used/
 _pycache_/

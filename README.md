@@ -228,6 +228,12 @@ python infer_hodgeformer.py \
 ```
 
 
+### Visualization
+
+```bash
+cd experiments/inference;
+python visualize.py --json_path out.json --output_dir ../results_viz
+```
 
 
 
