@@ -75,11 +75,11 @@ def initialize_map_datasets(paths: List[str], cfg: Dict) -> Tuple[Dict, Dict]:
     """
     Initialize Map Dataset.
     """
-    dataset = MeshMapDatasetInfer(paths, **cfg["dataset"]["test"]["kw"])
+    dataset = MeshMapDatasetInfer(paths, **cfg["dataset"]["kw"])
 
     loader = DataLoader(
         dataset,
-        **cfg["dataset"]["dataloader"]["test"],
+        **cfg["dataset"]["dataloader"],
         collate_fn=collate_batch_w_sparse_fn_infer
     )
 
@@ -133,10 +133,10 @@ def main():
     _, data_loader = initialize_map_datasets(paths, cfg)
 
     ## Prepare model
-    model = load_model(args.model_path, cfg["train"]["model"], device)
+    model = load_model(args.model_path, cfg["model"], device)
 
     # Perform inference
-    kw = {"task": cfg["train"]["model"]["task_type"]}
+    kw = {"task": cfg["model"]["task_type"]}
 
     preds = infer_epoch(data_loader=data_loader, model=model, device=device, kw=kw)
 

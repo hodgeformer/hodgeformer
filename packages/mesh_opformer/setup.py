@@ -12,7 +12,11 @@ setup(
     author_email="",
     package_dir={"": "src"},
     packages=find_namespace_packages(where="src"),
-    entry_points={"console_scripts": []},
+    entry_points={
+        "console_scripts": [
+            "infer-hodgeformer = bin.infer_hodgeformer:main",
+        ]
+    },
     install_requires=[
         "torch>=2.0.0",
         "numpy>=1.20.0",
